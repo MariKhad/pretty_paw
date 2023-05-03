@@ -15,7 +15,7 @@
 <body>
 	<header class="header">
 		<div class="container header__container">
-			<a href="/index.html" class="logo__link"><img src="img/logo.svg" alt="Оранжевый логотип зоосада Pretty Paw"
+			<a href="/index.html" class="header__link"><img src="img/logo.svg" alt="Оранжевый логотип зоосада Pretty Paw"
 					class="header__img"></a>
 		</div>
 		<nav class="header__nav navigation">
@@ -48,7 +48,7 @@
 						Здесь содержатся различные виды животных со&nbsp;всего мира, начиная от&nbsp;крупных хищников, таких
 						как
 						львы и&nbsp;тигры, до&nbsp;разнообразных птиц, рыб и&nbsp;насекомых.</p>
-					<a href="#about" class="about__link">Подробнее</a>
+					<a href="#about" class="about__link link-main">Подробнее</a>
 					<ul class="about__count-list">
 						<li class="about__count-item">
 							<p class="about__count">500+</p>
@@ -64,7 +64,7 @@
 					<div class="about__slider swiper">
 						<ul class="about__image-list swiper-wrapper">
 							<li class="about__image-item swiper-slide">
-								<picture class="about__image-wrapper" loading="lazy">
+								<picture class="about__image-wrapper">
 									<source srcset=" /src/img/leo_desktop.webp" media="(min-width: 1280px)" type="image/webp">
 									<source srcset=" /src/img/leo_desktop.jpg" media="(min-width: 1280px)">
 									<source srcset=" /src/img/leo_laptop.webp" media="(min-width: 1024px)" type="image/webp">
@@ -72,7 +72,7 @@
 									<source srcset=" /src/img/leo_tablet.webp" media="(min-width: 768px)" type="image/webp">
 									<source srcset=" /src/img/leo_tablet.jpg" media="(min-width: 768px)">
 									<source srcset="/src/img/leo.webp" type="image/webp">
-									<img src="/src/img/leo.jpg" alt="Пара львов" class="about__image">
+									<img src="/src/img/leo.jpg" alt="Пара львов" class="about__image" loading="lazy">
 								</picture>
 							</li>
 
@@ -85,12 +85,12 @@
 									<source srcset="/src/img/parrots_tablet.webp" media="(min-width: 768px)" type="image/webp">
 									<source srcset="/src/img/parrots_tablet.jpg" media="(min-width: 768px)">
 									<source srcset="/src/img/parrots.webp" type="image/webp">
-									<img src="/src/img/parrots.jpg" alt="Група попугаев" class="about__image">
+									<img src="/src/img/parrots.jpg" alt="Група попугаев" class="about__image" loading="lazy">
 								</picture>
 							</li>
 
 							<li class="about__image-item swiper-slide">
-								<picture class="about__image-wrapper" loading="lazy">
+								<picture class="about__image-wrapper">
 									<source srcset="/src/img/fulgens_desktop.webp" media="(min-width: 1280px)" type="image/webp">
 									<source srcset="/src/img/fulgens_desktop.jpg" media="(min-width: 1280px)">
 									<source srcset="/src/img/fulgens_laptop.webp" media="(min-width: 1024px)" type="image/webp">
@@ -98,12 +98,12 @@
 									<source srcset="/src/img/fulgens_tablet.webp" media="(min-width: 768px)" type="image/webp">
 									<source srcset="/src/img/fulgens_tablet.jpg" media="(min-width: 768px)">
 									<source srcset="/src/img/fulgens.webp" type="image/webp">
-									<img src="/src/img/fulgens.jpg" alt="Красная панда" class="about__image">
+									<img src="/src/img/fulgens.jpg" alt="Красная панда" class="about__image" loading="lazy">
 								</picture>
 							</li>
 
 							<li class="about__image-item swiper-slide">
-								<picture class="about__image-wrapper" loading="lazy">
+								<picture class="about__image-wrapper">
 									<source srcset="/src/img/giraffe_desktop.webp" media="(min-width: 1280px)" type="image/webp">
 									<source srcset="/src/img/giraffe_desktop.jpg" media="(min-width: 1280px)">
 									<source srcset="/src/img/giraffe_laptop.webp" media="(min-width: 1024px)" type="image/webp">
@@ -111,7 +111,8 @@
 									<source srcset="/src/img/giraffe_tablet.webp" media="(min-width: 768px)" type="image/webp">
 									<source srcset="/src/img/giraffe_tablet.jpg" media="(min-width: 768px)">
 									<source srcset="/src/img/giraffe.webp" type="image/webp">
-									<img src="/src/img/giraffe.jpg" alt="Голова жирафа высовывающего язык" class="about__image">
+									<img src="/src/img/giraffe.jpg" alt="Голова жирафа высовывающего язык" class="about__image"
+										loading="lazy">
 								</picture>
 							</li>
 
@@ -166,73 +167,76 @@
 		</section>
 		<section class="career">
 			<div class="container career__container">
-				<h2 class="career__title">О&nbsp;компании</h2>
-				<p class="career__descripion">Карьера в&nbsp;компании &laquo;Зоосад&raquo; может предоставить много
-					интересных и&nbsp;перспективных возможностей для людей, увлеченных животными и&nbsp;желающих
-					развиваться в&nbsp;этой области.</p>
-				<a href="#career" class="career__link">Подробнее</a>
-				<div class="career__picture">
-					<div class="career__slider swiper">
-						<ul class="career__image-list swiper-wrapper">
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/parrots2.webp" type="image/webp">
-									<img src="/src/img/parrots2.jpg" alt="Група попугаев" class="career__image">
-								</picture>
-							</li>
+				<div class="career__content">
+					<h2 class="career__title">О&nbsp;компании</h2>
+					<p class="career__descripion">Карьера в&nbsp;компании &laquo;Pretty&nbsp;Paw&raquo; может предоставить
+						много
+						интересных и&nbsp;перспективных возможностей для людей, увлеченных животными и&nbsp;желающих
+						развиваться в&nbsp;этой области.</p>
+					<a href="#career" class="career__link link-main">Подробнее</a>
+				</div>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/giraffe2.webp" type="image/webp">
-									<img src="/src/img/giraffe2.jpg" alt="Жираф" class="career__image">
-								</picture>
-							</li>
+				<div class="career__slider swiper">
+					<ul class="career__image-list swiper-wrapper">
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/parrots2.webp" type="image/webp">
+								<img src="/src/img/parrots2.jpg" alt="Група попугаев" class="career__image" loading="lazy">
+							</picture>
+						</li>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/giraffes.webp" type="image/webp">
-									<img src="/src/img/giraffes.jpg" alt="Жирафы в загоне" class="career__image">
-								</picture>
-							</li>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/giraffe2.webp" type="image/webp">
+								<img src="/src/img/giraffe2.jpg" alt="Жираф" class="career__image" loading="lazy">
+							</picture>
+						</li>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/leo2.webp" type="image/webp">
-									<img src="/src/img/leo2.jpg" alt="Лев и львица" class="career__image">
-								</picture>
-							</li>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/giraffes.webp" type="image/webp">
+								<img src="/src/img/giraffes.jpg" alt="Жирафы в загоне" class="career__image" loading="lazy">
+							</picture>
+						</li>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/meerkat.webp" type="image/webp">
-									<img src="/src/img/meerkat.jpg" alt="Суррикат" class="career__image">
-								</picture>
-							</li>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/leo2.webp" type="image/webp">
+								<img src="/src/img/leo2.jpg" alt="Лев и львица" class="career__image" loading="lazy">
+							</picture>
+						</li>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/flamingos.webp" type="image/webp">
-									<img src="/src/img/flamingos.jpg" alt="Большая стая фламинго" class="career__image">
-								</picture>
-							</li>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/meerkat.webp" type="image/webp">
+								<img src="/src/img/meerkat.jpg" alt="Суррикат" class="career__image" loading="lazy">
+							</picture>
+						</li>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/zebra.webp" type="image/webp">
-									<img src="/src/img/zebra.jpg" alt="Зебра" class="career__image">
-								</picture>
-							</li>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/flamingos.webp" type="image/webp">
+								<img src="/src/img/flamingos.jpg" alt="Большая стая фламинго" class="career__image"
+									loading="lazy">
+							</picture>
+						</li>
 
-							<li class="career__image-item swiper-slide">
-								<picture class="career__image-wrapper" loading="lazy">
-									<source srcset="/src/img/elephant.webp" type="image/webp">
-									<img src="/src/img/elephant.jpg" alt="Слон" class="career__image">
-								</picture>
-							</li>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/zebra.webp" type="image/webp">
+								<img src="/src/img/zebra.jpg" alt="Зебра" class="career__image" loading="lazy">
+							</picture>
+						</li>
 
-						</ul>
-						<div class="career__slider-pagination swiper-pagination"></div>
-					</div>
+						<li class="career__image-item swiper-slide">
+							<picture class="career__image-wrapper">
+								<source srcset="/src/img/elephant.webp" type="image/webp">
+								<img src="/src/img/elephant.jpg" alt="Слон" class="career__image" loading="lazy">
+							</picture>
+						</li>
+
+					</ul>
+					<div class="career__slider-pagination swiper-pagination"></div>
 				</div>
 			</div>
 		</section>
@@ -240,7 +244,8 @@
 
 	<footer class="footer">
 		<div class="container footer__container">
-			<img src="img/logo-black.svg" alt="Черный логотип Pretty Paw" class="footer__logo">
+			<a href="/index.html" class="footer__link"><img src="img/logo-black.svg" alt="Черный логотип Pretty Paw"
+					class="footer__logo"></a>
 			<ul class="footer__social-list">
 				<li class="footer__social-item">
 					<a href="https://youtube.com" class="footer__social-link" target="_blank">
@@ -263,7 +268,7 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="footer_developers">
+			<ul class="footer__developers">
 				<li class="footer__developer">Designer: <a href="https:/t.me/Mrshmallowww" target="_blank">Anastasia
 						Ilina</a></li>
 				<li class="footer__developer">Developer: <a href="https:/t.me/bzzzuka" target="_blank">Marina Khadieva</a>

@@ -8,4 +8,6 @@ await imagemin(['src/img/*.{jpg,png}'], {
 	]
 });
 
+
+
 console.log('Конвертация в webp завершена');
