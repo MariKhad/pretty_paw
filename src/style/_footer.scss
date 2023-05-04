@@ -24,8 +24,6 @@
 		}
 	}
 
-	// .footer__logo
-
 	&__logo {
 		grid-area: logo;
 		width: 200px;
@@ -86,11 +84,6 @@
 		}
 	}
 
-
-	&__developer {}
-
-	// .footer__copywrite
-
 	&__copyright {
 		grid-area: copyright;
 		margin: 0;
@@ -100,5 +93,3 @@
 		padding-bottom: 50px;
 	}
 }
-
-.container {}
