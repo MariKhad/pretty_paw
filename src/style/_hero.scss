@@ -1,0 +1,100 @@
+.hero {
+	position: relative;
+	@include background;
+	background-image: url('/src/img/hero/poster@1x.jpg');
+	background-image: image-set(url('/src/img/hero/poster@2x.avif') 2x,
+			url('/src/img/hero/poster@1x.avif') 1x,
+			url('/src/img/hero/poster@2x.webp') 2x,
+			url('/src/img/hero/poster@1x.webp') 1x,
+			url('/src/img/hero/poster@2x.jpg') 2x,
+			url('/src/img/hero/poster@1x.jpg') 1x);
+
+	@include md {
+		background-image: url('/src/img/hero/poster_desktop@1x.jpg');
+		background-image: image-set(url('/src/img/hero/poster_desktop@1x.avif') 2x,
+				url('/src/img/hero/poster_desktop@1x.webp') 2x,
+				url('/src/img/hero/poster_desktop@1x.jpg') 2x);
+	}
+
+	@include xl {
+		background-image: url('/src/img/hero/poster_desktop@2x.jpg');
+		background-image: image-set(url('/src/img/hero/poster_desktop@4x.avif') 2x,
+				url('/src/img/hero/poster_desktop@2x.avif') 1x,
+				url('/src/img/hero/poster_desktop@4x.webp') 2x,
+				url('/src/img/hero/poster_desktop@2x.webp') 1x,
+				url('/src/img/hero/poster_desktop@4x.jpg') 2x,
+				url('/src/img/hero/poster_desktop@2x.jpg') 1x);
+	}
+
+	@include xxl {
+		background-image: url('/src/img/hero/poster_desktop@4x.jpg');
+		background-image: image-set(url('/src/img/hero/poster_desktop@4x.avif') 2x,
+				url('/src/img/hero/poster_desktop@4x.webp') 2x,
+				url('/src/img/hero/poster_desktop@4x.jpg') 2x);
+	}
+
+	&__container {
+		position: relative;
+		z-index: 10;
+		min-height: 554px;
+		padding-top: 120px;
+		padding-bottom: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+
+		@include lg {
+			padding-bottom: 74px;
+		}
+
+		@include xl {
+			min-height: 780px;
+			padding-bottom: 100px;
+		}
+
+		@include xxl {
+			min-height: 100vh;
+		}
+	}
+
+	&__title {
+		color: $back;
+		font-weight: 1000;
+		font-size: 40px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+
+		@include lg {
+			font-size: 52px;
+			margin-bottom: 40px;
+		}
+	}
+
+	// .hero__subtitle
+
+	&__subtitle {
+		color: $second;
+		font-size: 20px;
+		line-height: 1;
+		text-transform: uppercase;
+
+		@include lg {
+			font-size: 40px;
+		}
+
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 5;
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+	}
+
+	&__video-bg {
+		z-index: 8;
+	}
+}

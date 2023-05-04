@@ -1,0 +1,28 @@
+.navigation {
+
+
+	&__list {
+		display: none;
+	}
+
+
+	&__item {}
+
+	// .navigation__link
+
+	&__link {}
+
+	&__button {
+		width: 36px;
+		aspect-ratio: 1 / 1;
+		background: url('/src/img/burger-menu.svg') center/contain no-repeat;
+
+		&_active {
+			background-image: url('/src/img/close-menu.svg');
+		}
+
+		@include lg {
+			width: 50px;
+		}
+	}
+}

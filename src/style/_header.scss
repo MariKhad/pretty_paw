@@ -1,0 +1,38 @@
+.header {
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 22px 0;
+	background-color: $main;
+
+	@include lg {
+		padding: 30px;
+	}
+
+	&__container {
+		@include flexible;
+	}
+
+	// .header__link
+
+	&__link {}
+
+	// .header__img
+
+	&__logo {
+		width: 200px;
+
+		color: $back;
+		z-index: 55;
+
+		@include lg {
+			width: 360px;
+		}
+	}
+
+	// .header__nav
+
+	&__nav {}
+}

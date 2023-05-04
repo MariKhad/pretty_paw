@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "webpack serve",
 		"webp": "node webp-convert.mjs",
+		"avif": "npx avif --input='src/img/hero/*.{jpg,png}' --output='src/img/hero' quality='70' --overwrite",
 		"build-dev": "webpack",
 		"build-prod": "webpack --node-env=production",
 		"clear": "rd /s /q dist"
@@ -43,6 +44,7 @@
 		"webpack-dev-server": "^4.13.3"
 	},
 	"dependencies": {
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"swiper": "^9.2.4"
 	}
 }

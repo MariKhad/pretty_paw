@@ -1,0 +1,104 @@
+.footer {
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	&__container {
+		width: 100%;
+		padding-top: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+
+		@include sm {
+			display: grid;
+			grid-template-columns: 1fr max-content;
+			column-gap: 40px;
+			row-gap: 40px;
+			grid-template-areas:
+				'logo social'
+				'copyright developers';
+		}
+
+		@include lg {
+			row-gap: 78px;
+		}
+	}
+
+	// .footer__logo
+
+	&__logo {
+		grid-area: logo;
+		width: 200px;
+		margin-bottom: 32px;
+
+		@include sm {
+			margin-bottom: 0px;
+		}
+
+		@include lg {
+			width: 360px;
+		}
+	}
+
+	&__social-list {
+		display: flex;
+		gap: 19px;
+		margin-bottom: 52px;
+
+		@include sm {
+			margin-bottom: 0px;
+		}
+
+		@include lg {
+			gap: 16px;
+		}
+	}
+
+
+	&__social-img {
+		width: 36px;
+		aspect-ratio: 1 / 1;
+
+		&:hover {
+			color: rebeccapurple;
+		}
+
+		@include lg {
+			width: 50px;
+		}
+	}
+
+	&__developers {
+		display: flex;
+		flex-direction: column;
+		grid-area: developers;
+		justify-self: end;
+		gap: 8px;
+		margin-bottom: 52px;
+		justify-items: end;
+
+		@include sm {
+			margin-bottom: 0px;
+		}
+
+		@include lg {
+			font-size: 20px;
+		}
+	}
+
+
+	&__developer {}
+
+	// .footer__copywrite
+
+	&__copyright {
+		grid-area: copyright;
+		margin: 0;
+	}
+
+	@include lg {
+		padding-bottom: 50px;
+	}
+}
+
+.container {}
