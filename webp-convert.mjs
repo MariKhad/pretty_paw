@@ -1,26 +1,13 @@
-import imagemin from "imagemin";
+import imagemin from "imagemin-keep-folder";
 import imageminWebp from "imagemin-webp";
 
-await imagemin(['src/img/career/*.{jpg,png}'], {
-	destination: 'src/img/career',
+await imagemin(['src/img/**/*.{jpg,png}'], {
+	destination: 'src/img/',
 	plugins: [
 		imageminWebp({ quality: 70 }),
 	]
 });
 
-await imagemin(['src/img/about/*.{jpg,png}'], {
-	destination: 'src/img/about',
-	plugins: [
-		imageminWebp({ quality: 70 }),
-	]
-});
-
-await imagemin(['src/img/hero/*.{jpg,png}'], {
-	destination: 'src/img/hero',
-	plugins: [
-		imageminWebp({ quality: 70 }),
-	]
-});
 
 
 

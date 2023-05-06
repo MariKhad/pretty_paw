@@ -2,5 +2,93 @@
 	&__container {
 		padding-top: 40px;
 		padding-bottom: 40px;
+
+		@include lg {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+
+		@include xl {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
 	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'title'
+			'description'
+			'link';
+		row-gap: 24px;
+		margin-bottom: 40px;
+
+		@include md {
+			grid-template-columns: 1fr max-content;
+			grid-template-areas:
+				'title link'
+				'description .';
+			gap: 30px;
+		}
+
+		@include lg {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 1000;
+		text-transform: uppercase;
+		color: $second;
+		line-height: 1;
+		grid-area: title;
+
+		@include lg {
+			font-size: 52px;
+		}
+	}
+
+	&__descripion {
+		max-width: 720px;
+		grid-area: description;
+
+		@include xl {
+			max-width: 690px;
+		}
+	}
+
+	&__link {
+		grid-area: link;
+	}
+
+	&__slider {
+
+		/* 	min-height: 288px; */
+		@include sm {}
+
+		@include md {}
+
+		@include lg {}
+
+		@include xl {}
+	}
+
+	&__image-list {}
+
+	&__image-item {}
+
+	&__image-wrapper {}
+
+	&__image {
+		border-radius: 16px;
+	}
+
+	.career__image-list .career__image-item:nth-child(2) {
+		width: 75%;
+	}
+
+
+	&__slider-pagination {}
 }

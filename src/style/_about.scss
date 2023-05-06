@@ -1,0 +1,150 @@
+.about {
+	padding: 80px 0;
+
+	@include lg {
+		padding: 100px 0;
+	}
+
+	&__container {
+
+		@include lg {
+			display: grid;
+			grid-template-columns: minmax(460px, 48%) 48fr;
+			grid-template-areas:
+				'title title'
+				'slider content';
+			gap: 40px 20px;
+		}
+
+		@include xl {
+			gap: 40px 30px;
+			grid-template-rows: min-content 1fr;
+			grid-template-areas:
+				'slider title'
+				'slider content';
+		}
+	}
+
+	&__title {
+		color: $second;
+		font-weight: 1000;
+		font-size: 32px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+
+		@include lg {
+			font-size: 52px;
+			grid-area: title;
+		}
+
+		@include xl {
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		margin-bottom: 13px;
+		background-image: url(../img/paw.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		padding-bottom: 27px;
+
+
+		@include md {
+			background-position: right bottom;
+			display: grid;
+			grid-template-columns: 1fr min-content;
+			grid-template-areas:
+				'description list'
+				'link .';
+			gap: 24px 92px;
+		}
+
+		@include lg {
+			background-position: center bottom;
+			grid-area: content;
+			grid-template-columns: 1fr;
+			grid-template-rows: min-content;
+			gap: 40px;
+			grid-template-areas:
+				'description'
+				'list'
+				'link';
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		@include xl {
+			gap: 60px;
+		}
+	}
+
+	&__descripion {
+		margin-bottom: 24px;
+		grid-area: description;
+
+		@include md {
+			margin-bottom: 0;
+		}
+
+		@include lg {
+			font-size: 20px;
+		}
+	}
+
+	&__link {
+		margin-bottom: 40px;
+
+		@include md {
+			grid-area: link;
+			margin-bottom: 0;
+			justify-self: start;
+		}
+
+		@include lg {
+			align-self: end;
+		}
+
+	}
+
+	&__count-list {
+		grid-area: list;
+		display: grid;
+		grid-template-columns: repeat(2, 120px);
+		gap: 20px;
+		color: $second;
+		font-weight: 1000;
+		line-height: 1;
+
+		@include lg {
+			grid-template-columns: repeat(2, 200px);
+			gap: 30px;
+		}
+	}
+
+	&__count-item {}
+
+	&__count {
+		font-size: 40px;
+		margin-bottom: 16px;
+
+		@include lg {
+			font-size: 52px;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__count-desc {}
+
+	&__picture {
+		@include lg {
+			grid-area: slider;
+		}
+	}
+
+	&__image {
+		border-radius: 16px;
+	}
+}
