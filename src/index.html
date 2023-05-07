@@ -43,7 +43,7 @@
 				<h1 class="hero__title">Зоосад</h1>
 				<p class="hero__subtitle">C&nbsp;заботой о&nbsp;животных</p>
 			</div>
-			<video class="hero__video-bg video-bg" loading="lazy" autoplay loop muted>
+			<video class="hero__video-bg video-bg" loading="lazy" autoplay loop muted playsinline>
 			</video>
 		</section>
 		<section class="about">
@@ -72,22 +72,25 @@
 						<ul class="about__image-list swiper-wrapper">
 							<li class="about__image-item swiper-slide">
 								<picture class="about__image-wrapper">
-									<source srcset=" /src/img/about/leo_desktop.avif" media="(min-width: 1280px)"
+									<source srcset="/src/img/about/leo_desktop@2x.avif" media="(min-width: 1440px)"
 										type="image/avif">
-									<source srcset=" /src/img/about/leo_desktop.webp" media="(min-width: 1280px)"
+									<source srcset="/src/img/about/leo_desktop@2x.webp" media="(min-width: 1440px)"
 										type="image/webp">
-									<source srcset=" /src/img/about/leo_desktop.jpg" media="(min-width: 1280px)">
+									<source srcset="/src/img/about/leo_desktop@2x.jpg" media="(min-width: 1440px)">
+									<source srcset="/src/img/about/leo_desktop.avif" media="(min-width: 1280px)"
+										type="image/avif">
+									<source srcset="/src/img/about/leo_desktop.webp" media="(min-width: 1280px)"
+										type="image/webp">
+									<source srcset="/src/img/about/leo_desktop.jpg" media="(min-width: 1280px)">
 
-									<source srcset=" /src/img/about/leo_laptop.avif" media="(min-width: 1024px)"
+									<source srcset="/src/img/about/leo_laptop.avif" media="(min-width: 1024px)"
 										type="image/avif">
-									<source srcset=" /src/img/about/leo_laptop.webp" media="(min-width: 1024px)"
+									<source srcset="/src/img/about/leo_laptop.webp" media="(min-width: 1024px)"
 										type="image/webp">
-									<source srcset=" /src/img/about/leo_laptop.jpg" media="(min-width: 1024px)">
-									<source srcset=" /src/img/about/leo_tablet.avif" media="(min-width: 768px)"
-										type="image/avif">
-									<source srcset=" /src/img/about/leo_tablet.webp" media="(min-width: 768px)"
-										type="image/webp">
-									<source srcset=" /src/img/about/leo_tablet.jpg" media="(min-width: 768px)">
+									<source srcset="/src/img/about/leo_laptop.jpg" media="(min-width: 1024px)">
+									<source srcset="/src/img/about/leo_tablet.avif" media="(min-width: 768px)" type="image/avif">
+									<source srcset="/src/img/about/leo_tablet.webp" media="(min-width: 768px)" type="image/webp">
+									<source srcset="/src/img/about/leo_tablet.jpg" media="(min-width: 768px)">
 									<source srcset="/src/img/about/leo.avif" type="image/avif">
 									<source srcset="/src/img/about/leo.webp" type="image/webp">
 									<img src="/src/img/about/leo.jpg" alt="Пара львов" class="about__image" loading="lazy">
@@ -96,6 +99,11 @@
 
 							<li class="about__image-item swiper-slide">
 								<picture class="about__image-wrapper" loading="lazy">
+									<source srcset="/src/img/about/parrots_desktop@2x.avif" media="(min-width: 1440px)"
+										type="image/avif">
+									<source srcset="/src/img/about/parrots_desktop@2x.webp" media="(min-width: 1440px)"
+										type="image/webp">
+									<source srcset="/src/img/about/parrots_desktop@2x.jpg" media="(min-width: 1440px)">
 									<source srcset="/src/img/about/parrots_desktop.avif" media="(min-width: 1280px)"
 										type="image/avif">
 									<source srcset="/src/img/about/parrots_desktop.webp" media="(min-width: 1280px)"
@@ -120,6 +128,11 @@
 
 							<li class="about__image-item swiper-slide">
 								<picture class="about__image-wrapper">
+									<source srcset="/src/img/about/fulgens_desktop@2x.avif" media="(min-width: 1440px)"
+										type="image/avif">
+									<source srcset="/src/img/about/fulgens_desktop@2x.webp" media="(min-width: 1440px)"
+										type="image/webp">
+									<source srcset="/src/img/about/fulgens_desktop@2x.jpg" media="(min-width: 1440px)">
 									<source srcset="/src/img/about/fulgens_desktop.avif" media="(min-width: 1280px)"
 										type="image/avif">
 									<source srcset="/src/img/about/fulgens_desktop.webp" media="(min-width: 1280px)"
@@ -144,6 +157,11 @@
 
 							<li class="about__image-item swiper-slide">
 								<picture class="about__image-wrapper">
+									<source srcset="/src/img/about/giraffe_desktop@2x.avif" media="(min-width: 1440px)"
+										type="image/avif">
+									<source srcset="/src/img/about/giraffe_desktop@2x.webp" media="(min-width: 1440px)"
+										type="image/webp">
+									<source srcset="/src/img/about/giraffe_desktop@2x.jpg" media="(min-width: 1440px)">
 									<source srcset="/src/img/about/giraffe_desktop.avif" media="(min-width: 1280px)"
 										type="image/avif">
 									<source srcset="/src/img/about/giraffe_desktop.webp" media="(min-width: 1280px)"
@@ -173,39 +191,39 @@
 			</div>
 		</section>
 		<section class="location">
-			<div class="container">
+			<div class="location__wrapper">
 				<h2 class="visually-hidden">
 					Локации зоопарка
 				</h2>
 				<ul class="location__list">
-					<li class="location__item">
+					<li class="location__item location__item_mammals">
 						<h3 class="location__title">Млекопитающие</h3>
 						<p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком
 							в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем
 							зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
 					</li>
-					<li class="location__item">
+					<li class="location__item location__item_birds">
 						<h3 class="location__title">Птицы</h3>
 						<p class="location__description">Эта группа включает в&nbsp;себя разнообразных пернатых обитателей
 							зоопарка, от&nbsp;маленьких певчих птиц до&nbsp;больших драпированных птиц хищников. В&nbsp;нашем
 							зоосаде можно
 							увидеть таких птиц, как фламинго, аисты, орлы и&nbsp;павлины.</p>
 					</li>
-					<li class="location__item">
+					<li class="location__item location__item_reptiles">
 						<h3 class="location__title">Рептилии</h3>
 						<p class="location__description">В&nbsp;эту группу входят животные, которые имеют чешуйчатую кожу и
 							обладают приспособлениями для жизни на&nbsp;суше или в&nbsp;воде. В&nbsp;нашем зоосаде можно
 							увидеть таких
 							рептилий, как крокодилы, змеи, черепахи и&nbsp;ящерицы.</p>
 					</li>
-					<li class="location__item">
-						<h3 class="location__title">Водный мир</h3>
+					<li class="location__item location__item_water">
+						<h3 class="location__title">Водный&nbsp;мир</h3>
 						<p class="location__description">В&nbsp;эту группу входят животные, которые живут в&nbsp;воде или
 							зависят от
 							воды для выживания. В&nbsp;нашем зоосаде можно увидеть разнообразных рыб, дельфинов, китов, акул и
 							других водных животных.</p>
 					</li>
-					<li class="location__item">
+					<li class="location__item location__item_insects">
 						<h3 class="location__title">Насекомые</h3>
 						<p class="location__description">В&nbsp;эту группу входят разнообразные насекомые, такие как бабочки,
 							жуки,
@@ -213,6 +231,8 @@
 						</p>
 					</li>
 				</ul>
+				<video class="location__video-bg video-bg" loading="lazy" autoplay loop muted playsinline>
+				</video>
 			</div>
 		</section>
 		<section class="career">

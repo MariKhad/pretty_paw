@@ -1,39 +1,33 @@
 .career {
-	&__container {
-		padding-top: 40px;
-		padding-bottom: 40px;
+	overflow-x: hidden;
+	padding-top: 80px;
+	padding-bottom: 40px;
 
-		@include lg {
-			padding-top: 60px;
-			padding-bottom: 60px;
-		}
-
-		@include xl {
-			padding-top: 100px;
-			padding-bottom: 100px;
-		}
+	@include lg {
+		padding-top: 100px;
+		padding-bottom: 100px;
 	}
 
 	&__content {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			'title'
-			'description'
-			'link';
-		row-gap: 24px;
 		margin-bottom: 40px;
 
 		@include md {
-			grid-template-columns: 1fr max-content;
+			display: grid;
+			grid-template-columns: 1fr min-content;
+			justify-content: space-between;
 			grid-template-areas:
 				'title link'
 				'description .';
-			gap: 30px;
+			gap: 11px 21px;
 		}
 
 		@include lg {
+			gap: 27px 31px;
 			margin-bottom: 50px;
+		}
+
+		@include xl {
+			grid-template-columns: 690px min-content;
 		}
 	}
 
@@ -43,7 +37,12 @@
 		text-transform: uppercase;
 		color: $second;
 		line-height: 1;
-		grid-area: title;
+		margin-bottom: 24px;
+
+		@include md {
+			grid-area: title;
+			margin-bottom: 0;
+		}
 
 		@include lg {
 			font-size: 52px;
@@ -52,11 +51,13 @@
 
 	&__descripion {
 		max-width: 720px;
-		grid-area: description;
+		margin-bottom: 24px;
 
-		@include xl {
-			max-width: 690px;
+		@include md {
+			grid-area: description;
+			margin-bottom: 0;
 		}
+
 	}
 
 	&__link {
@@ -64,31 +65,50 @@
 	}
 
 	&__slider {
-
-		/* 	min-height: 288px; */
-		@include sm {}
-
-		@include md {}
-
-		@include lg {}
-
-		@include xl {}
+		@include md {
+			overflow: unset;
+		}
 	}
 
-	&__image-list {}
+	&__image-item {
+		height: unset;
+		display: flex;
+		align-items: center;
 
-	&__image-item {}
+		@include sm {
+			&:nth-child(odd) {
+				width: 56%;
+			}
 
-	&__image-wrapper {}
+			&:nth-child(even) {
+				width: 40%;
+			}
+		}
+
+		@include md {
+			&:nth-child(odd) {
+				width: 34.66%;
+			}
+
+			&:nth-child(even) {
+				width: 25.14%;
+			}
+		}
+
+		@include xl {
+			&:nth-child(odd) {
+				width: 27.11%;
+			}
+
+			&:nth-child(even) {
+				width: 19.67%;
+			}
+		}
+	}
 
 	&__image {
 		border-radius: 16px;
+		width: 100%
 	}
 
-	.career__image-list .career__image-item:nth-child(2) {
-		width: 75%;
-	}
-
-
-	&__slider-pagination {}
 }

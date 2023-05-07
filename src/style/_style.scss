@@ -160,19 +160,3 @@ iframe {
 	height: 10px;
 	background-color: $back;
 }
-
-.swiper-pagination-bullets {
-	@include sm {
-		display: none;
-	}
-}
-
-.swiper-slide {
-	transition: transform 0.3s ease;
-}
-
-.swiper-slide:nth-child(2n) {
-	@include sm {
-		transform: scale(0.73);
-	}
-}

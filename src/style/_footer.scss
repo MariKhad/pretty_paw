@@ -5,27 +5,19 @@
 	&__container {
 		width: 100%;
 		padding-top: 16px;
-		display: flex;
-		flex-direction: column;
-		gap: 0;
 
 		@include sm {
 			display: grid;
 			grid-template-columns: 1fr max-content;
-			column-gap: 40px;
-			row-gap: 40px;
-			grid-template-areas:
-				'logo social'
-				'copyright developers';
+			gap: 40px;
 		}
 
 		@include lg {
-			row-gap: 78px;
+			row-gap: 72px;
 		}
 	}
 
 	&__logo {
-		grid-area: logo;
 		width: 200px;
 		margin-bottom: 32px;
 
@@ -40,7 +32,7 @@
 
 	&__social-list {
 		display: flex;
-		gap: 19px;
+		gap: 16px;
 		margin-bottom: 52px;
 
 		@include sm {
@@ -48,14 +40,14 @@
 		}
 
 		@include lg {
-			gap: 16px;
+			gap: 36px;
 		}
 	}
 
 
 	&__social-img {
+		display: block;
 		width: 36px;
-		aspect-ratio: 1 / 1;
 
 		&:hover {
 			color: rebeccapurple;
@@ -67,16 +59,11 @@
 	}
 
 	&__developers {
-		display: flex;
-		flex-direction: column;
-		grid-area: developers;
-		justify-self: end;
-		gap: 8px;
 		margin-bottom: 52px;
-		justify-items: end;
 
 		@include sm {
 			margin-bottom: 0px;
+			order: 2;
 		}
 
 		@include lg {
@@ -84,9 +71,15 @@
 		}
 	}
 
+	&__developer {
+		&:not(:last-child) {
+			margin-bottom: 19px;
+		}
+	}
+
 	&__copyright {
-		grid-area: copyright;
 		margin: 0;
+
 	}
 
 	@include lg {

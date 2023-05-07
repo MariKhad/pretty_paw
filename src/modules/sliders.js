@@ -9,7 +9,7 @@ const params = {
 		delay: 3500,
 		disableOnInteraction: true,
 	},
-	sliderPerview: 1,
+	slidesPerView: 1,
 	pagination: {
 		el: '.swiper-pagination',
 	},

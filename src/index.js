@@ -21,40 +21,37 @@ sliderInit('.career__slider', {
 			pagination: {
 				el: '.career__slider-pagination'
 			},
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: true,
+			},
 		},
 
 		576: {
-			slidesPerView: 2,
+			slidesPerView: 'auto',
 			spaceBetween: 20,
-			slideToClickedSlide: true,
-			pagination: {
-				enable: false,
-			}
+			pagination: false
 		},
 
-		680: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-			slideToClickedSlide: true,
-		},
-
-		980: {
-			slidesPerView: 3,
+		1024: {
+			slidesPerView: 'auto',
 			spaceBetween: 26,
-			slideToClickedSlide: true,
+			pagination: false
 		},
 
 		1280: {
-			slidesPerView: 4,
+			slidesPerView: 'auto',
 			spaceBetween: 30,
-			slideToClickedSlide: true,
+			pagination: false
 		}
 	}
 });
 
-const videoBg = document.querySelector('.video-bg');
+const videoBg = document.querySelectorAll('.video-bg');
 
-videoBg.innerHTML = `
+videoBg.forEach((videoBlock) => {
+	videoBlock.innerHTML = `
 <source src="video/video.webm" type="video/webm">
 <source src="video/video.mp4" type="video/mp4">
 `;
+})

@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "webpack serve",
 		"webp": "node webp-convert.mjs",
-		"avif": "npx avif --input='src/img/hero/*.{jpg,png}' --output='src/img/hero' quality='70' --overwrite",
+		"avif": "npx avif --input='src/img/about/*.{jpg,png}' --output='src/img/about' quality='70' --overwrite",
 		"build-dev": "webpack",
 		"build-prod": "webpack --node-env=production",
 		"clear": "rd /s /q dist"
