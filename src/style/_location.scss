@@ -4,6 +4,7 @@
 	}
 
 	&__list {
+
 		@include lg {
 			display: flex;
 			justify-content: space-between;
@@ -26,6 +27,7 @@
 		position: relative;
 		padding: 50px 16px;
 		min-height: 273px;
+		z-index: 11;
 		background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 
 		@include sm {
@@ -42,7 +44,7 @@
 		&::after {
 			content: '';
 			position: absolute;
-			z-index: 11;
+			z-index: 12;
 			width: calc(100% - 32px);
 			display: block;
 			bottom: 0;
@@ -294,7 +296,7 @@
 		color: $back;
 		line-height: 1;
 		white-space: nowrap;
-		z-index: 9;
+		z-index: 12;
 
 		@include lg {
 			color: $second;
@@ -322,6 +324,7 @@
 
 	&__video-bg {
 		display: none;
+		z-index: 5;
 
 		@include lg {
 			display: block;
@@ -331,7 +334,6 @@
 			right: 0;
 			left: 0;
 			bottom: 0;
-			z-index: 8;
 			max-height: 100%;
 			max-width: 100%;
 		}
