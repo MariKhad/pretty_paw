@@ -1,5 +1,7 @@
 .location {
-	&__wrapper {}
+	&__wrapper {
+		position: relative;
+	}
 
 	&__list {
 		@include lg {
@@ -48,6 +50,7 @@
 			height: 0.5px;
 			background-color: $second;
 			transform: translate(50%, 0.5px);
+			overflow-x: hidden;
 
 			@include lg {
 				bottom: 50%;
@@ -322,8 +325,8 @@
 
 		@include lg {
 			display: block;
-			object-fit: contain;
-			background-position: center bottom;
+			object-fit: cover;
+			object-position: 50% 50%;
 			top: 0;
 			right: 0;
 			left: 0;
