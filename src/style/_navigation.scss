@@ -3,6 +3,90 @@
 
 	&__list {
 		display: none;
+		background-color: $main;
+		color: $second;
+		position: absolute;
+		overflow-y: auto;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: -1;
+		padding-top: 120px;
+		padding-bottom: 120px;
+		text-align: center;
+
+		@include lg {
+			padding-top: 146px;
+			padding-bottom: 146px;
+		}
+
+		@include xl {
+			position: static;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			height: auto;
+			gap: 8px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include xl {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		font-size: 16px;
+		font-weight: 1000;
+		line-height: 1;
+		white-space: nowrap;
+
+		&_disabled {
+			color: #C2C2C2;
+			pointer-events: none;
+		}
+
+		&:focus {
+			color: orange;
+		}
+
+		&:hover {
+			color: $back;
+		}
+
+		&_active {
+			color: $back;
+			pointer-events: none;
+		}
+
+		@include xl {
+			display: block;
+			padding: 19px 32px;
+			border: 2px solid $back;
+			border-radius: 80px;
+
+			&_disabled {
+				border-color: #C2C2C2;
+			}
+
+			:focus {
+				color: inherit;
+				background-color: $back;
+			}
+
+			&_active {
+				color: inherit;
+				background-color: $back;
+			}
+		}
 	}
 
 
@@ -10,6 +94,8 @@
 		width: 36px;
 		aspect-ratio: 1 / 1;
 		background: url('/src/img/burger-menu.svg') center/contain no-repeat;
+		transition: background-image 0.3s ease-in-out;
+
 
 		&_active {
 			background-image: url('/src/img/close-menu.svg');
@@ -17,6 +103,10 @@
 
 		@include lg {
 			width: 50px;
+		}
+
+		@include xl {
+			display: none;
 		}
 	}
 }

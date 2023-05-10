@@ -4,8 +4,10 @@ import 'swiper/scss/pagination';
 import './index.scss';
 import { sliderInit, careerSlidesInit } from '/src/modules/sliders';
 import { videoBackgroundInit } from '/src/modules/videoBackground';
+import { menuControl } from './modules/menuControl';
 
 careerSlidesInit();
+menuControl();
 
 sliderInit('.about__slider', {
 	pagination: {

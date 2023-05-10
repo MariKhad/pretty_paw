@@ -24,14 +24,15 @@
 
 			<nav class="header__nav navigation">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a href="/index.html" class="navigation__link">Главная</a></li>
-					<li class="navigation__item"><a href="#about" class="navigation__link">О&nbsp;зоосаде</a></li>
+					<li class="navigation__item"><a href="/index.html"
+							class="navigation__link navigation__link_active">Главная</a></li>
+					<li class="navigation__item"><a href="#about"
+							class="navigation__link navigation__link_disabled">О&nbsp;зоосаде</a></li>
 					<li class="navigation__item"><a href="#history" class="navigation__link">История</a></li>
 					<li class="navigation__item"><a href="#deeds" class="navigation__link">Добрые&nbsp;дела</a></li>
 					<li class="navigation__item"><a href="#career" class="navigation__link">Карьера</a></li>
 				</ul>
 				<button class="navigation__button" aria-label="Открыть меню">
-					<img src="/src/img/burger-menu.svg" alt="Бургер меню" class="navigation__button-img">
 				</button>
 			</nav>
 		</div>
@@ -55,7 +56,11 @@
 						Здесь содержатся различные виды животных со&nbsp;всего мира, начиная от&nbsp;крупных хищников, таких
 						как
 						львы и&nbsp;тигры, до&nbsp;разнообразных птиц, рыб и&nbsp;насекомых.</p>
-					<a href="#about" class="about__link link-main">Подробнее</a>
+					<a href="#about" class="about__link link-main">Подробнее
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<use href="img/images.svg#arrow"></use>
+						</svg>
+					</a>
 					<ul class="about__count-list">
 						<li class="about__count-item">
 							<p class="about__count">500+</p>
@@ -191,49 +196,47 @@
 			</div>
 		</section>
 		<section class="location">
-			<div class="location__wrapper">
-				<h2 class="visually-hidden">
-					Локации зоопарка
-				</h2>
-				<ul class="location__list">
-					<li class="location__item location__item_mammals">
-						<h3 class="location__title">Млекопитающие</h3>
-						<p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком
-							в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем
-							зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
-					</li>
-					<li class="location__item location__item_birds">
-						<h3 class="location__title">Птицы</h3>
-						<p class="location__description">Эта группа включает в&nbsp;себя разнообразных пернатых обитателей
-							зоопарка, от&nbsp;маленьких певчих птиц до&nbsp;больших драпированных птиц хищников. В&nbsp;нашем
-							зоосаде можно
-							увидеть таких птиц, как фламинго, аисты, орлы и&nbsp;павлины.</p>
-					</li>
-					<li class="location__item location__item_reptiles">
-						<h3 class="location__title">Рептилии</h3>
-						<p class="location__description">В&nbsp;эту группу входят животные, которые имеют чешуйчатую кожу и
-							обладают приспособлениями для жизни на&nbsp;суше или в&nbsp;воде. В&nbsp;нашем зоосаде можно
-							увидеть таких
-							рептилий, как крокодилы, змеи, черепахи и&nbsp;ящерицы.</p>
-					</li>
-					<li class="location__item location__item_water">
-						<h3 class="location__title">Водный&nbsp;мир</h3>
-						<p class="location__description">В&nbsp;эту группу входят животные, которые живут в&nbsp;воде или
-							зависят от
-							воды для выживания. В&nbsp;нашем зоосаде можно увидеть разнообразных рыб, дельфинов, китов, акул и
-							других водных животных.</p>
-					</li>
-					<li class="location__item location__item_insects">
-						<h3 class="location__title">Насекомые</h3>
-						<p class="location__description">В&nbsp;эту группу входят разнообразные насекомые, такие как бабочки,
-							жуки,
-							муравьи и&nbsp;пчелы. В&nbsp;нашем зоосаде можно увидеть различных беспозвоночных и&nbsp;насекомых.
-						</p>
-					</li>
-				</ul>
-				<video class="location__video-bg video-bg" autoplay loop muted playsinline>
-				</video>
-			</div>
+			<h2 class="visually-hidden">
+				Локации зоопарка
+			</h2>
+			<ul class="location__list">
+				<li class="location__item location__item_mammals">
+					<h3 class="location__title">Млекопитающие</h3>
+					<p class="location__description">В&nbsp;эту группу входят животные, которые питаются молоком
+						в&nbsp;раннем возрасте и&nbsp;обладают механизмом регуляции телевой температуры. В&nbsp;нашем
+						зоосаде можно увидеть млекопитающих, таких как львы, тигры, слоны и&nbsp;обезьяны.</p>
+				</li>
+				<li class="location__item location__item_birds">
+					<h3 class="location__title">Птицы</h3>
+					<p class="location__description">Эта группа включает в&nbsp;себя разнообразных пернатых обитателей
+						зоопарка, от&nbsp;маленьких певчих птиц до&nbsp;больших драпированных птиц хищников. В&nbsp;нашем
+						зоосаде можно
+						увидеть таких птиц, как фламинго, аисты, орлы и&nbsp;павлины.</p>
+				</li>
+				<li class="location__item location__item_reptiles">
+					<h3 class="location__title">Рептилии</h3>
+					<p class="location__description">В&nbsp;эту группу входят животные, которые имеют чешуйчатую кожу и
+						обладают приспособлениями для жизни на&nbsp;суше или в&nbsp;воде. В&nbsp;нашем зоосаде можно
+						увидеть таких
+						рептилий, как крокодилы, змеи, черепахи и&nbsp;ящерицы.</p>
+				</li>
+				<li class="location__item location__item_water">
+					<h3 class="location__title">Водный&nbsp;мир</h3>
+					<p class="location__description">В&nbsp;эту группу входят животные, которые живут в&nbsp;воде или
+						зависят от
+						воды для выживания. В&nbsp;нашем зоосаде можно увидеть разнообразных рыб, дельфинов, китов, акул и
+						других водных животных.</p>
+				</li>
+				<li class="location__item location__item_insects">
+					<h3 class="location__title">Насекомые</h3>
+					<p class="location__description">В&nbsp;эту группу входят разнообразные насекомые, такие как бабочки,
+						жуки,
+						муравьи и&nbsp;пчелы. В&nbsp;нашем зоосаде можно увидеть различных беспозвоночных и&nbsp;насекомых.
+					</p>
+				</li>
+			</ul>
+			<video class="location__video-bg video-bg" autoplay loop muted playsinline>
+			</video>
 		</section>
 		<section class="career">
 			<div class="container career__container">
@@ -243,7 +246,12 @@
 						много
 						интересных и&nbsp;перспективных возможностей для людей, увлеченных животными и&nbsp;желающих
 						развиваться в&nbsp;этой области.</p>
-					<a href="#career" class="career__link link-main">Подробнее</a>
+					<a href="#career" class="career__link link-main link-main_disabled">Подробнее
+						<svg class="career__svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+							<use href="img/images.svg#arrow"></use>
+						</svg>
+					</a>
 				</div>
 
 				<div class="career__slider swiper">

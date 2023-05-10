@@ -1,7 +1,8 @@
 .location {
-	&__wrapper {
+	position: relative;
+	/* &__wrapper {
 		position: relative;
-	}
+	} */
 
 	&__list {
 		z-index: 10;
