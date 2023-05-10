@@ -76,31 +76,31 @@
 		align-items: center;
 
 		@include sm {
-			&:nth-child(odd) {
+			&_odd {
 				width: 56%;
 			}
 
-			&:nth-child(even) {
+			&_even {
 				width: 40%;
 			}
 		}
 
 		@include md {
-			&:nth-child(odd) {
+			&_odd {
 				width: 34.66%;
 			}
 
-			&:nth-child(even) {
+			&_even {
 				width: 25.14%;
 			}
 		}
 
 		@include xl {
-			&:nth-child(odd) {
+			&_odd {
 				width: 27.11%;
 			}
 
-			&:nth-child(even) {
+			&_even {
 				width: 19.67%;
 			}
 		}

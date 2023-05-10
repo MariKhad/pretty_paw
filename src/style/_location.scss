@@ -83,7 +83,7 @@
 			}
 		}
 
-		/* &_mammals::before {
+		&_mammals::before {
 			z-index: -5;
 			background-image: url('/src/img/location/mammals.jpg');
 
@@ -109,20 +109,9 @@
 						url('/src/img/location/mammals_tablet.jpg') 1x,
 					);
 			}
-
-			@include lg {
-				background-image: url('/src/img/location/mammals_laptop.jpg');
-
-				background-image:
-					imageset(url('/src/img/location/mammals_laptop@2x.avif') 2x,
-						url('/src/img/location/mammals_laptop@2x.webp') 2x,
-						url('/src/img/location/mammals_laptop@2x.jpg') 2x,
-						url('/src/img/location/mammals_laptop.avif') 1x,
-						url('/src/img/location/mammals_laptop.webp') 1x,
-						url('/src/img/location/mammals_laptop.jpg') 1x,
-					);
-			}
 		}
+
+
 
 		&_birds::before {
 			z-index: -5;
@@ -151,20 +140,8 @@
 						url('/src/img/location/birds_tablet.jpg') 1x,
 					);
 			}
-
-			@include lg {
-				background-image: url('/src/img/location/birds_laptop.jpg');
-
-				background-image:
-					imageset(url('/src/img/location/birds_laptop@2x.avif') 2x,
-						url('/src/img/location/birds_laptop@2x.webp') 2x,
-						url('/src/img/location/birds_laptop@2x.jpg') 2x,
-						url('/src/img/location/birds_laptop.avif') 1x,
-						url('/src/img/location/birds_laptop.webp') 1x,
-						url('/src/img/location/birds_laptop.jpg') 1x,
-					);
-			}
 		}
+
 
 		&_reptiles::before {
 			z-index: -5;
@@ -192,18 +169,6 @@
 					);
 			}
 
-			@include lg {
-				background-image: url('/src/img/location/reptiles_laptop.jpg');
-
-				background-image:
-					imageset(url('/src/img/location/reptiles_laptop@2x.avif') 2x,
-						url('/src/img/location/reptiles_laptop@2x.webp') 2x,
-						url('/src/img/location/reptiles_laptop@2x.jpg') 2x,
-						url('/src/img/location/reptiles_laptop.avif') 1x,
-						url('/src/img/location/reptiles_laptop.webp') 1x,
-						url('/src/img/location/reptiles_laptop.jpg') 1x,
-					);
-			}
 		}
 
 		&_water::before {
@@ -231,20 +196,8 @@
 						url('/src/img/location/water_tablet.jpg') 1x,
 					);
 			}
-
-			@include lg {
-				background-image: url('/src/img/location/water_laptop.jpg');
-
-				background-image:
-					imageset(url('/src/img/location/water_laptop@2x.avif') 2x,
-						url('/src/img/location/water_laptop@2x.webp') 2x,
-						url('/src/img/location/water_laptop@2x.jpg') 2x,
-						url('/src/img/location/water_laptop.avif') 1x,
-						url('/src/img/location/water_laptop.webp') 1x,
-						url('/src/img/location/water_laptop.jpg') 1x,
-					);
-			}
 		}
+
 
 		&_insects::before {
 			z-index: -5;
@@ -274,20 +227,8 @@
 					);
 			}
 
+		}
 
-			@include lg {
-				background-image: url('/src/img/location/insects_laptop.jpg');
-
-				background-image:
-					imageset(url('/src/img/location/insects_laptop@2x.avif') 2x,
-						url('/src/img/location/insects_laptop@2x.webp') 2x,
-						url('/src/img/location/insects_laptop@2x.jpg') 2x,
-						url('/src/img/location/insects_laptop.avif') 1x,
-						url('/src/img/location/insects_laptop.webp') 1x,
-						url('/src/img/location/insects_laptop.jpg') 1x,
-					);
-			}
-		} */
 	}
 
 	&__title {
@@ -330,8 +271,6 @@
 
 		@include lg {
 			display: block;
-			object-fit: cover;
-			object-position: 50% 50%;
 			top: 0;
 			right: 0;
 			left: 0;
@@ -340,7 +279,10 @@
 			max-width: 100%;
 		}
 
-		/* @include xl {
+	}
+}
+
+/*  @include xl {
 			min-height: 780px;
 		}
 
@@ -348,6 +290,4 @@
 			min-height: 100vh;
 			max-width: 2560px;
 			margin: 0 auto;
-		} */
-	}
-}
+		}  */

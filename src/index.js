@@ -2,8 +2,10 @@ import './index.html';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './index.scss';
-import { sliderInit } from '/src/modules/sliders';
+import { sliderInit, careerSlidesInit } from '/src/modules/sliders';
+import { videoBackgroundInit } from '/src/modules/videoBackground';
 
+careerSlidesInit();
 
 sliderInit('.about__slider', {
 	pagination: {
@@ -47,11 +49,7 @@ sliderInit('.career__slider', {
 	}
 });
 
-const videoBg = document.querySelectorAll('.video-bg');
 
-videoBg.forEach((videoBlock) => {
-	videoBlock.innerHTML = `
-<source src="video/video.webm" type="video/webm">
-<source src="video/video.mp4" type="video/mp4">
-`;
-})
+
+videoBackgroundInit();
+

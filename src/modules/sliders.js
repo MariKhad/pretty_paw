@@ -22,3 +22,10 @@ export const sliderInit = (selectorSlider, newParams) => {
 		...newParams
 	})
 };
+
+export function careerSlidesInit() {
+	const careerSlides = document.querySelectorAll('.career__image-item');
+	careerSlides.forEach((slide, i) => {
+		slide.classList.add(`career__image-item_${(i % 2 == 0) ? 'even' : 'odd'}`);
+	});
+}

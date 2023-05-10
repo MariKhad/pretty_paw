@@ -31,6 +31,8 @@
 		background-image: image-set(url('/src/img/hero/poster_desktop@4x.avif') 2x,
 				url('/src/img/hero/poster_desktop@4x.webp') 2x,
 				url('/src/img/hero/poster_desktop@4x.jpg') 2x);
+		max-width: 2560px;
+		margin: 0 auto;
 	}
 
 	&__container {
