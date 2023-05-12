@@ -115,19 +115,15 @@ iframe {
 	background-color: $second;
 	border-radius: 80px;
 	width: auto;
-	border: 2px solid $second;
+	border: 2px solid transparent;
 
 	&_disabled {
 		color: #C2C2C2;
 		pointer-events: none;
 	}
 
-	&:hover {
-		color: black;
-	}
-
-	&:focus {
-		border: 2px solid #000000;
+	&:focus:not(:hover) {
+		border-color: $main;
 	}
 
 	@include lg {
@@ -135,8 +131,11 @@ iframe {
 		font-size: 20px;
 		gap: 10px;
 		width: 209px;
-	}
 
+		&:hover {
+			color: $main;
+		}
+	}
 }
 
 .video-bg {

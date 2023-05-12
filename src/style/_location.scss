@@ -1,18 +1,35 @@
 .location {
 	position: relative;
-	/* &__wrapper {
-		position: relative;
-	} */
 
 	&__list {
 		z-index: 10;
 		position: relative;
+		--opacity: 0;
+		--background-image: none;
 
 		@include lg {
 			display: flex;
 			justify-content: space-between;
 			min-height: 552px;
-			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+
+			&::before {
+				content: '';
+				position: abolute;
+				inset: 0;
+				background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+			}
+
+			&::after {
+				content: '';
+				position: abolute;
+				inset: 0;
+				z-index: -1;
+				background-position: center;
+				background-size: cover;
+				opacity: var(--opacity);
+				background-image: var(--background-image);
+			}
 		}
 
 		@include xl {
@@ -39,7 +56,7 @@
 		}
 
 		@include lg {
-			flex: 0 0 calc(100% / 5);
+			width: 20%;
 			padding: 0;
 			background: none;
 		}
@@ -232,6 +249,16 @@
 
 	}
 
+	&__content {
+		@include lg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: rotate(-90deg) translate(-50%, -50%);
+			transform-origin: top left;
+		}
+	}
+
 	&__title {
 		margin-bottom: 16px;
 		font-size: 20px;
@@ -244,16 +271,14 @@
 
 		@include lg {
 			color: $second;
-			position: absolute;
-			top: 50%;
-			left: 50%;
 			margin-bottom: 0;
-			transform: rotate(-90deg) translate(-50%, -50%);
-			transform-origin: top left;
+			text-align: center;
+			padding: 0 20px;
 		}
 
 		@include xl {
 			font-size: 32px;
+			padding: 0 30px;
 		}
 
 	}
@@ -262,7 +287,15 @@
 		color: $second;
 
 		@include lg {
+			text-align: center;
 			display: none;
+			padding: 0 20px;
+			font-size: 16px;
+		}
+
+		@include xl {
+			font-size: 20px;
+			padding: 0 30px;
 		}
 	}
 

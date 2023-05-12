@@ -48,18 +48,13 @@
 		font-weight: 1000;
 		line-height: 1;
 		white-space: nowrap;
+		outline: 2px solid transparent;
+		outline-offset: 5px;
+		padding: 0 5px;
 
 		&_disabled {
 			color: #C2C2C2;
 			pointer-events: none;
-		}
-
-		&:focus {
-			color: orange;
-		}
-
-		&:hover {
-			color: $back;
 		}
 
 		&_active {
@@ -67,19 +62,33 @@
 			pointer-events: none;
 		}
 
+		&:focus:not(:hover) {
+			outline: $back;
+		}
+
+
+		@include md {
+			&:hover {
+				color: $back;
+			}
+		}
+
+
+
 		@include xl {
 			display: block;
 			padding: 19px 32px;
 			border: 2px solid $back;
 			border-radius: 80px;
+			outline: none;
+
+			&:focus:not(:hover) {
+				color: inherit;
+				background-color: $back;
+			}
 
 			&_disabled {
 				border-color: #C2C2C2;
-			}
-
-			:focus {
-				color: inherit;
-				background-color: $back;
 			}
 
 			&_active {
@@ -95,7 +104,13 @@
 		aspect-ratio: 1 / 1;
 		background: url('/src/img/burger-menu.svg') center/contain no-repeat;
 		transition: background-image 0.3s ease-in-out;
+		outline: 2px solid transparent;
+		outline-offset: 5px;
+		padding: 0 5px;
 
+		&:focus:not(:hover) {
+			outline: $back;
+		}
 
 		&_active {
 			background-image: url('/src/img/close-menu.svg');
