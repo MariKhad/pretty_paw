@@ -9,7 +9,7 @@ import { locationHover } from './modules/locationHover';
 
 careerSlidesInit();
 menuControl();
-//videoBackgroundInit();
+videoBackgroundInit();
 locationHover();
 
 

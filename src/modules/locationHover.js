@@ -48,6 +48,7 @@ export const locationHover = () => {
 					'--opacity': 1,
 					duration: 1
 				});
+
 			}
 		});
 
@@ -61,6 +62,15 @@ export const locationHover = () => {
 			}
 		});
 
+		const linkPreload = document.createElement('link');
+		linkPreload.rel = 'preload';
+		linkPreload.href = item.dataset.image;
+		linkPreload.as = 'image';
+
+		if (mediaQueryLG.matches) {
+			document?.head.append(linkPreload);
+		}
+
 		mediaQueryLG.addEventListener('change', e => {
 			if (!e.matches) {
 				content.style = '';
@@ -71,9 +81,6 @@ export const locationHover = () => {
 			}
 		});
 
-		const linkPreload = document.createElement('link');
-		linkPreload.rel = 'preload';
-		linkPreload.href = item.dataset.image;
-		linkPreload.as = 'image';
 	}
+
 }
