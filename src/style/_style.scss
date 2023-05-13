@@ -138,6 +138,18 @@ iframe {
 	}
 }
 
+.title {
+	color: $second;
+	font-weight: 1000;
+	font-size: 32px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@include lg {
+		font-size: 52px;
+	}
+}
+
 .video-bg {
 	position: absolute;
 	top: 0;

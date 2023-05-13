@@ -33,20 +33,11 @@
 	}
 
 	&__title {
-		font-size: 32px;
-		font-weight: 1000;
-		text-transform: uppercase;
-		color: $second;
-		line-height: 1;
 		margin-bottom: 24px;
 
 		@include md {
 			grid-area: title;
 			margin-bottom: 0;
-		}
-
-		@include lg {
-			font-size: 52px;
 		}
 	}
 

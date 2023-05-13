@@ -26,15 +26,9 @@
 	}
 
 	&__title {
-		color: $second;
-		font-weight: 1000;
-		font-size: 32px;
-		line-height: 1;
-		text-transform: uppercase;
 		margin-bottom: 24px;
 
 		@include lg {
-			font-size: 52px;
 			grid-area: title;
 		}
 

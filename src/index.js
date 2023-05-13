@@ -1,4 +1,5 @@
 import './index.html';
+import './page.html';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './index.scss';
@@ -6,6 +7,8 @@ import { sliderInit, careerSlidesInit } from '/src/modules/sliders';
 import { videoBackgroundInit } from '/src/modules/videoBackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
+
+
 
 careerSlidesInit();
 menuControl();

@@ -1,0 +1,153 @@
+.page {
+	padding-top: 120px;
+	display: flex;
+
+	@include lg {
+		padding-top: 216px;
+	}
+
+	&__container {
+		padding-left: 16px;
+		padding-right: 16px;
+
+		@include sm {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		@include md {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+
+		@include lg {
+			padding-left: 45px;
+		}
+
+
+		@include xl {
+			padding-left: 115px;
+			padding-right: 260px;
+		}
+	}
+
+	&__nav {
+		display: none;
+
+		@include lg {
+			padding-left: 32px;
+			display: flex;
+			height: 100vh;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		@include xl {
+			padding-left: 30px;
+		}
+	}
+
+	&__nav-wrapper {
+		@include lg {
+			position: static;
+			padding: 0px;
+			align-self: flex-end;
+		}
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__nav-item {
+		@include lg {
+			margin-bottom: 24px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__nav-tab {
+		@include lg {
+			color: $second;
+			font-weight: 1000;
+		}
+
+		&_active {
+			@include lg {
+				color: $main;
+			}
+		}
+	}
+
+
+
+	&__text {
+		font-size: 16px;
+		margin-bottom: 40px;
+
+		@include lg {
+			font-size: 20px;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+
+		@include lg {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__wrapper {
+
+		@include md {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 18px;
+		}
+
+		@include lg {
+			gap: 20px;
+		}
+
+		@include xl {
+			gap: 30px;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 18px;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		&:last-child {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__img_small-second {
+		display: none;
+
+		@include sm {
+			display: inline;
+		}
+	}
+
+	&__link {
+		width: max-content;
+		margin-bottom: 44px;
+
+
+		@include lg {
+			margin-bottom: 104px;
+		}
+	}
+}
