@@ -114,7 +114,7 @@ iframe {
 	color: $back;
 	background-color: $second;
 	border-radius: 80px;
-	width: auto;
+	width: max-content;
 	border: 2px solid transparent;
 
 	&_disabled {
@@ -167,6 +167,12 @@ iframe {
 	}
 }
 
+.swiper-pagination {
+	@include sm {
+		display: none;
+	}
+}
+
 .swiper-pagination-bullet {
 	width: 10px;
 	aspect-ratio: 1 / 1;
@@ -180,4 +186,34 @@ iframe {
 	width: 40px;
 	height: 10px;
 	background-color: $back;
+}
+
+.arrow-top {
+	width: 36px;
+	height: 36px;
+	right: 16px;
+	bottom: 30px;
+
+	&:hover {
+		color: $back;
+	}
+
+	@include sm {
+		right: 30px;
+	}
+
+	@include lg {
+		width: 50px;
+		height: 50px;
+		bottom: 100px;
+	}
+
+
+	&__svg {
+		width: 12px;
+
+		@include lg {
+			width: 16px;
+		}
+	}
 }

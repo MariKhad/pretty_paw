@@ -1,0 +1,40 @@
+.page-nav {
+	display: none;
+
+	@include lg {
+		display: block;
+		position: fixed;
+		top: 120px;
+		left: 30px;
+
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		@include lg {
+			margin-bottom: 24px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+		@include lg {
+			color: $second;
+			font-weight: 1000;
+		}
+
+		&_active {
+			@include lg {
+				color: $main;
+				pointer-events: none;
+			}
+		}
+	}
+}

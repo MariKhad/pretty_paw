@@ -1,9 +1,10 @@
 .page {
 	padding-top: 120px;
-	display: flex;
+	padding-bottom: 40px;
 
 	@include lg {
 		padding-top: 216px;
+		padding-bottom: 100px;
 	}
 
 	&__container {
@@ -21,77 +22,15 @@
 		}
 
 		@include lg {
-			padding-left: 45px;
+			max-width: 1144px;
+			padding-left: 192px;
 		}
 
 
 		@include xl {
-			padding-left: 115px;
-			padding-right: 260px;
-		}
-	}
-
-	&__nav {
-		display: none;
-
-		@include lg {
-			padding-left: 32px;
-			display: flex;
-			height: 100vh;
-			flex-direction: column;
-			justify-content: flex-start;
-		}
-
-		@include xl {
-			padding-left: 30px;
-		}
-	}
-
-	&__nav-wrapper {
-		@include lg {
-			position: static;
-			padding: 0px;
-			align-self: flex-end;
-		}
-	}
-
-	&__nav-list {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__nav-item {
-		@include lg {
-			margin-bottom: 24px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	&__nav-tab {
-		@include lg {
-			color: $second;
-			font-weight: 1000;
-		}
-
-		&_active {
-			@include lg {
-				color: $main;
-			}
-		}
-	}
-
-
-
-	&__text {
-		font-size: 16px;
-		margin-bottom: 40px;
-
-		@include lg {
-			font-size: 20px;
-			margin-bottom: 60px;
+			max-width: 920px;
+			padding: 0;
+			margin: 0 auto;
 		}
 	}
 
@@ -103,51 +42,96 @@
 		}
 	}
 
-	&__wrapper {
+	&__text-block {
+		font-size: 16px;
+		margin-bottom: 40px;
 
-		@include md {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 18px;
+		&::last-child {
+			margin-bottom: 0;
 		}
 
 		@include lg {
-			gap: 20px;
+			font-size: 20px;
+			margin-bottom: 60px;
 		}
 
-		@include xl {
-			gap: 30px;
+	}
+
+
+	&__text {
+		margin-bottom: 16px;
+
+		&::last-child {
+			margin-bottom: 0;
+		}
+
+		@include lg {
+			margin-bottom: 20px;
 		}
 	}
 
-	&__img {
-		width: 100%;
-		border-radius: 18px;
 
-		&:not(:last-child) {
-			margin-bottom: 40px;
-		}
+	&__img-block {
+		margin-bottom: 40px;
 
 		&:last-child {
 			margin-bottom: 30px;
 		}
-	}
-
-	&__img_small-second {
-		display: none;
 
 		@include sm {
-			display: inline;
+			&_double {
+				--gap: 18px;
+
+				display: flex;
+				gap: var(--gap);
+
+				.page__img-wrapper {
+					width: calc(50% - (var(--gap) / 2));
+				}
+
+
+				@include lg {
+					--gap: 20px;
+				}
+
+				@include xl {
+					--gap: 30px;
+				}
+			}
+		}
+
+
+	}
+
+	&__img-wrapper {
+		&:nth-child(2) {
+			display: none;
+
+			@include sm {
+				display: block;
+			}
+		}
+
+
+	}
+
+	&__img {
+		object-fit: cover;
+		border-radius: 16px;
+
+		&_changed {
+			height: 308px;
+
+			@include sm {
+				height: auto;
+				flex-grow: 1;
+			}
 		}
 	}
+
+
 
 	&__link {
 		width: max-content;
-		margin-bottom: 44px;
-
-
-		@include lg {
-			margin-bottom: 104px;
-		}
 	}
 }

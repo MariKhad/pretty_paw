@@ -4,7 +4,7 @@ export const locationHover = () => {
 	const locationList = document.querySelector('.location__list');
 	const locationItems = document.querySelectorAll('.location__item');
 
-	const mediaQueryXL = window.matchMedia('(min-width: 1280px)');
+	const mediaQueryXL = window.matchMedia('(min-width: 1240px)');
 	const mediaQueryLG = window.matchMedia('(min-width: 1024px)');
 
 	for (let item of locationItems) {
@@ -28,7 +28,7 @@ export const locationHover = () => {
 			})
 			.to(title, {
 				whiteSpace: 'unset',
-				hyphens: 'auto',
+				hyphens: 'manual',
 				color: '#FFAA05',
 				margin: mediaQueryXL.matches ? '40px' : '24px',
 				duration: 0

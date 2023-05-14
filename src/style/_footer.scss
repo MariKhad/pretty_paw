@@ -48,6 +48,15 @@
 	&__social-img {
 		display: block;
 		width: 36px;
+		color: $main;
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+		border-radius: 3px;
+		transition: color .3s ease-in-out;
+
+		&:focus:not(:hover) {
+			outline: 2px solid $second;
+		}
 
 		&:hover {
 			color: $second;
@@ -74,6 +83,21 @@
 	&__developer {
 		&:not(:last-child) {
 			margin-bottom: 19px;
+		}
+	}
+
+	&__developer-link {
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+		border-radius: 3px;
+		transition: color .3s ease-in-out;
+
+		&:focus:not(:hover) {
+			outline: 2px solid $second;
+		}
+
+		&:hover {
+			color: $second;
 		}
 	}
 

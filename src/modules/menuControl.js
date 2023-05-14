@@ -23,6 +23,7 @@ export function menuControl() {
 	}
 
 	function closeMenu() {
+		navigationButton.classList.remove('navigation__button_active');
 		tl.reverse();
 	}
 
@@ -49,10 +50,14 @@ export function menuControl() {
 				const x = i % 2 ? 500 : -500;
 				gsap.set(elem, { opacity: 1, x, duration: 0 })
 			});
+
+			if (navigationButton.classList.contains('navigation__button_active')) {
+				tl.restart();
+			}
 		}
 	}
 
-	const mediaQuery = window.matchMedia('(min-width: 1280px)');
+	const mediaQuery = window.matchMedia('(min-width: 1240px)');
 	mediaQuery.addEventListener('change', checkScreenSize);
 	checkScreenSize(mediaQuery);
 }
