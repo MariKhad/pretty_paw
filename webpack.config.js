@@ -42,7 +42,7 @@ module.exports = {
 		}),
 
 		new FaviconWebpackPlugin({
-			logo: './src/img/favicon.ico',
+			logo: './src/img/favicon.png',
 			inject: true,
 		})
 	],
