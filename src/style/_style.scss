@@ -196,6 +196,7 @@ iframe {
 
 	&:hover {
 		color: $back;
+		background-color: #feefff;
 	}
 
 	@include sm {

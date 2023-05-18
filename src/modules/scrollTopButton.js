@@ -13,7 +13,7 @@ export const debounce = (fn, msec) => {
 	}
 };
 
-const createArrow = (className = 'arrow-up', { hover = false } = {}) => {
+const createArrow = (className = 'arrow-top', { hover = true } = {}) => {
 	const button = document.createElement('button');
 
 	button.innerHTML = `
