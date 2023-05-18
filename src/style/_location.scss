@@ -61,29 +61,31 @@
 			background-image: none;
 		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			z-index: 12;
-			width: calc(100% - 32px);
-			display: block;
-			bottom: 0;
-			right: 50%;
-			height: 1px;
-			background-color: $second;
-			transform: translate(50%, 1px);
-			overflow-x: hidden;
+		&:not(:last-child) {
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: 12;
+				width: calc(100% - 32px);
+				display: block;
+				bottom: 0;
+				right: 50%;
+				height: 1px;
+				background-color: $second;
+				transform: translate(50%, 1px);
+				overflow-x: hidden;
 
-			@include lg {
-				bottom: 50%;
-				right: 0;
-				height: calc(100% - 186px);
-				width: 1px;
-				transform: translate(1px, 50%);
-			}
+				@include lg {
+					bottom: 50%;
+					right: 0;
+					height: calc(100% - 186px);
+					width: 1px;
+					transform: translate(1px, 50%);
+				}
 
-			@include xl {
-				height: calc(100% - 200px);
+				@include xl {
+					height: calc(100% - 200px);
+				}
 			}
 		}
 
