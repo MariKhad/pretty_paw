@@ -32,6 +32,12 @@ $second: #ffffff;
 	}
 }
 
+@mixin xxxl {
+	@media (min-width: 2560px) {
+		@content;
+	}
+}
+
 @mixin flexible {
 	display: flex;
 	align-items: center;

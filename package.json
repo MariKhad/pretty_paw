@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "webpack serve",
 		"webp": "node webp-convert.mjs",
-		"avif": "npx avif --input='src/img/page/*.{jpg,png}' --output='src/img/page' quality='70' --overwrite",
+		"avif": "npx avif --input='src/img/about/*.{jpg,png}' --output='src/img/about' quality='70' --overwrite",
 		"build-dev": "webpack",
 		"build-prod": "webpack --node-env=production",
 		"pages-prod": "git add dist && git commit -m 'Initial dist subtree commit' git subtree push --prefix dist origin gh-pages",

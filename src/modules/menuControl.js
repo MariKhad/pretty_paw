@@ -54,8 +54,17 @@ export function menuControl() {
 			if (navigationButton.classList.contains('navigation__button_active')) {
 				tl.restart();
 			}
+
+			navigationList.addEventListener('click', ({ target }) => {
+				if (target.closest('.navigation__link')) {
+					closeMenu();
+				}
+			})
 		}
 	}
+
+
+
 
 	const mediaQuery = window.matchMedia('(min-width: 1240px)');
 	mediaQuery.addEventListener('change', checkScreenSize);

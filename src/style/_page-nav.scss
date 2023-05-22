@@ -1,12 +1,23 @@
 .page-nav {
 	display: none;
+	position: relative;
+	max-width: 150px;
 
 	@include lg {
 		display: block;
-		position: fixed;
-		top: 216px;
+		position: sticky;
+		top: 185px;
 		left: 30px;
 
+	}
+
+	@include xl {
+		left: 60px;
+	}
+
+
+	@include xxxl {
+		left: calc((100% - 2560px)/ 2 + 60px);
 	}
 
 	&__list {

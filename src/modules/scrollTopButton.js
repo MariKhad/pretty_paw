@@ -72,9 +72,32 @@ export const initScrollTopButton = (className, options) => {
 	const showElemScrollPosition = () => {
 		const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-		arrow.style.display =
-			(scrollPosition > window.innerHeight) / 2 ? 'flex' : 'none';
+
+		if ((scrollPosition > window.innerHeight) / 2) {
+			arrow.style.display = 'flex';
+		} else {
+			arrow.style.display = 'none';
+		}
 	}
 
 	window.addEventListener('scroll', debounce(showElemScrollPosition, 100));
 }
+
+
+
+/* if (arrow.style.opacity === 0) {
+	let animation = arrow.animate([
+		{ opacity: '0' },
+		{ opacity: '1' }], { duration: 300 })
+	animation.addEventListener('finish', () => {
+		arrow.style.opacity = 1;
+	});
+} else {
+	let animation = arrow.animate([
+		{ opacity: '1' },
+		{ opacity: '0' }], { duration: 300 })
+	animation.addEventListener('finish', () => {
+		arrow.style.opacity = 0;
+		arrow.style.display = 'none';
+	});
+} */

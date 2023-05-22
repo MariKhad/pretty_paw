@@ -167,12 +167,6 @@ iframe {
 	}
 }
 
-.swiper-pagination {
-	@include sm {
-		display: none;
-	}
-}
-
 .swiper-pagination-bullet {
 	width: 10px;
 	aspect-ratio: 1 / 1;

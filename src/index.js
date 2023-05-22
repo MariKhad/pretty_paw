@@ -15,7 +15,7 @@ import { pageControlInit } from './modules/pageControl';
 careerSlidesInit();
 menuControl();
 videoBackgroundInit();
-initScrollTopButton('arrow-top');
+initScrollTopButton();
 locationHover();
 pageControlInit();
 

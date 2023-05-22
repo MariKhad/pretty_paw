@@ -1,9 +1,10 @@
 .page {
 	padding-top: 120px;
 	padding-bottom: 40px;
+	padding-left: 10px;
 
 	@include lg {
-		padding-top: 216px;
+		padding-top: 0;
 		padding-bottom: 100px;
 	}
 
@@ -28,8 +29,14 @@
 
 
 		@include xl {
+			padding-left: 80px;
 			max-width: 920px;
-			padding: 0;
+			margin: 0 auto;
+		}
+
+		@include xxl {
+			max-width: 1200px;
+			padding-left: 192px;
 			margin: 0 auto;
 		}
 	}

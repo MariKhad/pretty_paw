@@ -69,6 +69,7 @@
 
 	&__developers {
 		margin-bottom: 52px;
+		line-height: 1;
 
 		@include sm {
 			margin-bottom: 0px;
@@ -82,7 +83,7 @@
 
 	&__developer {
 		&:not(:last-child) {
-			margin-bottom: 19px;
+			margin-bottom: 16px;
 		}
 	}
 

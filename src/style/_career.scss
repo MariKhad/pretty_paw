@@ -103,4 +103,10 @@
 		width: 100%
 	}
 
+	&__slider-pagination {
+		@include sm {
+			display: none;
+		}
+	}
+
 }
