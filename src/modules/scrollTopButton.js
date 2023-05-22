@@ -13,7 +13,7 @@ export const debounce = (fn, msec) => {
 	}
 };
 
-const createArrow = (className = 'arrow-top', { hover = true } = {}) => {
+const createArrow = (className = 'arrow-up', { hover = true } = {}) => {
 	const button = document.createElement('button');
 
 	button.innerHTML = `
@@ -41,6 +41,7 @@ const createArrow = (className = 'arrow-top', { hover = true } = {}) => {
 		 justify-content: center;
 		 align-items: center;
 		 display: none;
+		 opacity: 0;
 		 color: #000000;
 	 	 ${hover && `transition: color .3s ease-in-out, background-color .3s, ease-in-out;`}
   	}
@@ -75,8 +76,21 @@ export const initScrollTopButton = (className, options) => {
 
 		if ((scrollPosition > window.innerHeight) / 2) {
 			arrow.style.display = 'flex';
+			/* if (arrow.style.opacity === 0) { */
+			let animation = arrow.animate([
+				{ opacity: '0' },
+				{ opacity: '1' }], { duration: 300 })
+			animation.addEventListener('finish', () => {
+				arrow.style.opacity = 1;
+			});
 		} else {
-			arrow.style.display = 'none';
+			let animation = arrow.animate([
+				{ opacity: '1' },
+				{ opacity: '0' }], { duration: 300 })
+			animation.addEventListener('finish', () => {
+				arrow.style.opacity = 0;
+				arrow.style.display = 'none';
+			})
 		}
 	}
 
@@ -86,18 +100,8 @@ export const initScrollTopButton = (className, options) => {
 
 
 /* if (arrow.style.opacity === 0) {
-	let animation = arrow.animate([
-		{ opacity: '0' },
-		{ opacity: '1' }], { duration: 300 })
-	animation.addEventListener('finish', () => {
-		arrow.style.opacity = 1;
-	});
+	
 } else {
-	let animation = arrow.animate([
-		{ opacity: '1' },
-		{ opacity: '0' }], { duration: 300 })
-	animation.addEventListener('finish', () => {
-		arrow.style.opacity = 0;
-		arrow.style.display = 'none';
+	
 	});
 } */
