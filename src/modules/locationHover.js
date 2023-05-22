@@ -47,7 +47,7 @@ export const locationHover = () => {
 				gsap.to(locationList, {
 					'--background-image': `url('${item.dataset.image}')`,
 					'--opacity': 1,
-					duration: 1
+					duration: 0.5
 				});
 
 			}
@@ -58,8 +58,11 @@ export const locationHover = () => {
 				tl.reverse();
 				gsap.to(locationList, {
 					'--opacity': 0,
-					duration: 1
+					duration: 0.5
 				});
+				content.style = '';
+				title.style = '';
+				description.style = '';
 			}
 		});
 
@@ -82,13 +85,13 @@ export const locationHover = () => {
 			}
 		});
 
-		mediaQueryLG.addEventListener('resize', debounce(e => {
-			if (!e.matches) {
+		window.addEventListener('resize', debounce(() => {
+			if (mediaQueryLG.matches) {
 				content.style = '';
 				title.style = '';
 				description.style = '';
 			}
-		}, 100));
+		}), 100);
 
 	}
 
