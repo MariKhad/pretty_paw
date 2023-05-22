@@ -73,16 +73,16 @@ export const initScrollTopButton = (className, options) => {
 	const showElemScrollPosition = () => {
 		const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-
 		if ((scrollPosition > window.innerHeight) / 2) {
 			arrow.style.display = 'flex';
-			/* if (arrow.style.opacity === 0) { */
-			let animation = arrow.animate([
-				{ opacity: '0' },
-				{ opacity: '1' }], { duration: 300 })
-			animation.addEventListener('finish', () => {
-				arrow.style.opacity = 1;
-			});
+			if (arrow.style.opacity === '0') {
+				let animation = arrow.animate([
+					{ opacity: '0' },
+					{ opacity: '1' }], { duration: 300 })
+				animation.addEventListener('finish', () => {
+					arrow.style.opacity = 1;
+				});
+			}
 		} else {
 			let animation = arrow.animate([
 				{ opacity: '1' },
